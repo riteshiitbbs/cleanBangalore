@@ -1,0 +1,32 @@
+<template name="home">
+  <div class="page home">
+
+    {{>nav title='Littered Area' black=true}}
+
+    <div class="content-scrollable">
+      <div class="bg-image home">
+        <span class="arrow"></span>
+      </div>
+
+      <div class="callout-news">
+        <span class="title-callout">News</span>
+        {{latestNews.text}}
+      </div>
+      <a href="{{pathFor 'zones'}}" class="btn-primary">Report Now !</a>
+      <a href="{{pathFor 'feed'}}" class="btn-primary blue-btn">See what's being reported</a>
+      <h2 class="list-title">Littered area</h2>
+      <div class="list-subtitle">See what the community is reporting</div>
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message">No one has reported yet!</div>
+            <div class="subtitle-message">Share your littered area and it will show up here.</div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+  </div>
+</template>

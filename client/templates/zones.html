@@ -1,0 +1,18 @@
+<template name="zones">
+  <div class="page zones">
+    {{> nav title='Littered Zones' black=true}}
+
+    <div class="content-scrollable">
+      <div class="list-zones">
+        {{#each this}}
+          {{#if highlighted}}
+            {{> zoneItem zone=this size='large'}}
+          {{else}}
+            {{> zoneItem zone=this size='small'}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+
+  </div>
+</template>

@@ -1,0 +1,14 @@
+<template name="zoneItem">
+  <a class="item-zone {{highlightedClass}}" href="{{path}}">
+    {{#with zone}}
+      <span class="attribution">
+        <span class="title-zone">{{title}}</span>
+        <span class="metadata-zone">
+          <span class="author-zone">{{source.name}}</span>
+        </span>
+      </span>
+    {{/with}}
+
+    <img src="{{zoneImage zone=zone size=size}}" />
+  </a>
+</template>
